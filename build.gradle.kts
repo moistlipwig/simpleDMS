@@ -36,8 +36,17 @@ javafx {
 }
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:", junitVersion)
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:", junitVersion)
+    // ZXing do QR kodów
+    implementation("com.google.zxing:core:3.5.3")
+    implementation("com.google.zxing:javase:3.5.3")
+    // PDFBox do obsługi PDF
+    implementation("org.apache.pdfbox:pdfbox:2.0.30")
+    // Spring Boot
+    implementation("org.springframework.boot:spring-boot-starter:3.3.0")
+    // Spring Boot autoconfigure (wymagane do @SpringBootApplication)
+    implementation("org.springframework.boot:spring-boot-autoconfigure:3.3.0")
 }
 
 tasks.withType<Test> {

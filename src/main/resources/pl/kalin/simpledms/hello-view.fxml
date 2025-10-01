@@ -13,4 +13,6 @@
 
     <Label fx:id="welcomeText"/>
     <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Button text="Wybierz plik z QR" onAction="#onSelectFileClick"/>
+    <Label fx:id="qrResultLabel" wrapText="true" style="-fx-font-size: 14; -fx-text-fill: #333;"/>
 </VBox>
